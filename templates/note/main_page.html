@@ -10,10 +10,172 @@
     <body>
 
         <div class="container">
-            <div class="notes button">Заметка 1</div>
-            <div class="notes button">Заметка 2</div>
-            <div class="notes button">Заметка 3</div>
+            <!-- Триггер/Открыть модальный -->
+            <button class="notes_button" id="myBtn1">Заметка 1</button>
+
+                <!-- Модальный -->
+                <div class="modal">
+
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Модальный заголовок</h2>
+                    </div>
+                    <!-- Модальное содержание -->
+                    <div class="modal-body">
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                        <p>Заметка 1..</p>
+                    </div>
+
+                </div>
+
+            <!-- Триггер/Открыть модальный -->
+            <button class="notes_button" id="myBtn2">Заметка 2</button>
+
+                <!-- Модальный -->
+                <div class="modal">
+
+                    <!-- Модальное содержание -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Заметка 2..</p>
+                    </div>
+
+                </div>
+
+            <!-- Триггер/Открыть модальный -->
+            <button class="notes_button" id="myBtn3">Заметка 3</button>
+
+                <!-- Модальный -->
+                <div class="modal">
+
+                    <!-- Модальное содержание -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Заметка 3..</p>
+                    </div>
+
+                </div>
+
+            <!-- Триггер/Открыть модальный -->
+            <button class="notes_button" id="myBtn4">Заметка 4</button>
+
+                <!-- Модальный -->
+                <div class="modal">
+
+                    <!-- Модальное содержание -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Заметка 4..</p>
+                    </div>
+
+                </div>
+
+            <!-- Триггер/Открыть модальный -->
+            <button class="notes_button" id="myBtn5">Заметка 5</button>
+
+                <!-- Модальный -->
+                <div class="modal">
+
+                    <!-- Модальное содержание -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Заметка 5..</p>
+                    </div>
+
+                </div>
+
+            <!-- Триггер/Открыть модальный -->
+            <button class="notes_button" id="myBtn6">Заметка 6</button>
+
+                <!-- Модальный -->
+                <div class="modal">
+
+                    <!-- Модальное содержание -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Заметка 6..</p>
+                    </div>
+
+                </div>
+
+            <!-- Триггер/Открыть модальный -->
+            <button class="notes_button" id="myBtn7">Заметка 7</button>
+
+                <!-- Модальный -->
+                <div class="modal">
+
+                    <!-- Модальное содержание -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Заметка 7..</p>
+                    </div>
+
+                </div>
+
         </div>
 
     </body>
+
+    <script>
+
+        var close;
+
+        document.addEventListener("click",function(is_close){
+            if (is_close.target.className == "notes_button"){
+                close = is_close.target.id;
+                document.getElementById(close).nextElementSibling.style="display:block";
+            }
+
+            if (is_close.target.className=="close"){
+                document.getElementById(close).nextElementSibling.style="display:none";
+            }
+        });
+
+        // Когда пользователь щелкает в любом месте за пределами модального, закройте его
+        //window.onclick = function(event) {
+        //    if (event.target == modal) {
+        //        modal.style.display = "none";
+        //    }
+        //}
+
+    </script>
+
 </html>

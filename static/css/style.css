@@ -3,7 +3,7 @@ body{
     text-align: center;
 }
 
-.notes{
+.notes_button{
     background: #fff;
     border-radius: 2px;
     display: inline-block;
@@ -15,6 +15,65 @@ body{
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
-.notes:hover{
+.notes_button:hover{
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* Модальный (фон) */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgb(0,0,0); /* Цвет запасной вариант */
+    background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+}
+
+/* Модальный заголовок и тело*/
+.modal-header {
+    background-color: #fefefe;
+    //margin: 15% auto; /* 15% сверху и по центру */
+    margin: 15% 10%;
+    margin-bottom: 0%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+
+.modal-body{
+    background-color: #fefefe;
+    //margin: 15% auto; /* 15% сверху и по центру */
+    margin: 10%;
+    margin-top: 0%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+
+/* Модальное содержание/коробка */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% сверху и по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+
+/* Кнопка закрытия */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
